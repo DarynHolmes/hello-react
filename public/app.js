@@ -1,4 +1,14 @@
+const Greeter = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1>Heyo React App</h1>,
+      </div>
+    );
+  }
+});
+
 ReactDOM.render(
-  <h1>Heyo React!!!</h1>,
+  <Greeter />,
   document.getElementById("app")
 );

@@ -49,6 +49,8 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 
+	console.log(objTwo);
+
 	ReactDOM.render(React.createElement(
 	    'h1',
 	    null,

@@ -5,4 +5,4 @@ const Greeter = require("./components/Greeter");
 var name = "Bobby";
 
 ReactDOM.render(
-    <Greeter name={name} message={"How are you?"}/>, document.getElementById("app"));
+    <Greeter name={name} message={"How are you today?"}/>, document.getElementById("app"));

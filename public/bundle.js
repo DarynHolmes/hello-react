@@ -48,36 +48,11 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-
-	var GreeterMessage = __webpack_require__(172);
-	var GreeterForm = __webpack_require__(173);
-
-	var Greeter = React.createClass({
-	    displayName: 'Greeter',
-
-
-	    getInitialState: function getInitialState() {
-	        return { name: this.props.name, message: this.props.message };
-	    },
-	    handleNewParams: function handleNewParams(params) {
-	        this.setState(params);
-	    },
-	    render: function render() {
-	        var name = this.state.name;
-	        var message = this.state.message;
-
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(GreeterMessage, { name: name, message: message }),
-	            React.createElement(GreeterForm, { onNewParams: this.handleNewParams })
-	        );
-	    }
-	});
+	var Greeter = __webpack_require__(172);
 
 	var name = "Bobby";
 
-	ReactDOM.render(React.createElement(Greeter, { name: name, message: "How are you?" }), document.getElementById("app"));
+	ReactDOM.render(React.createElement(Greeter, { name: name, message: "How are you today?" }), document.getElementById("app"));
 
 /***/ },
 /* 1 */
@@ -21434,10 +21409,44 @@
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+
+	var React = __webpack_require__(1);
+	var GreeterMessage = __webpack_require__(173);
+	var GreeterForm = __webpack_require__(174);
+
+	var Greeter = React.createClass({
+	    displayName: "Greeter",
+
+
+	    getInitialState: function getInitialState() {
+	        return { name: this.props.name, message: this.props.message };
+	    },
+	    handleNewParams: function handleNewParams(params) {
+	        this.setState(params);
+	    },
+	    render: function render() {
+	        var name = this.state.name;
+	        var message = this.state.message;
+
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(GreeterMessage, { name: name, message: message }),
+	            React.createElement(GreeterForm, { onNewParams: this.handleNewParams })
+	        );
+	    }
+	});
+
+	module.exports = Greeter;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
 
 	var GreeterMessage = React.createClass({
 	    displayName: 'GreeterMessage',
@@ -21465,7 +21474,7 @@
 	module.exports = GreeterMessage;
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

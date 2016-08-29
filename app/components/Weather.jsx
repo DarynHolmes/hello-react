@@ -1,11 +1,17 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+const WeatherForm = require('components/WeatherForm');
+const WeatherMessage = require('components/WeatherMessage');
 
 var Weather = React.createClass({
 
   render: function() {
     return (
-      <h3>Weather component</h3>
+      <div>
+        <h3>Get Weather</h3>
+        <WeatherForm />
+        <WeatherMessage />
+      </div>
     );
   }
 

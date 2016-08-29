@@ -27164,6 +27164,8 @@
 
 	var React = __webpack_require__(1);
 	var PropTypes = React.PropTypes;
+	var WeatherForm = __webpack_require__(240);
+	var WeatherMessage = __webpack_require__(241);
 
 	var Weather = React.createClass({
 	  displayName: 'Weather',
@@ -27171,9 +27173,15 @@
 
 	  render: function render() {
 	    return React.createElement(
-	      'h3',
+	      'div',
 	      null,
-	      'Weather component'
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Get Weather'
+	      ),
+	      React.createElement(WeatherForm, null),
+	      React.createElement(WeatherMessage, null)
 	    );
 	  }
 
@@ -27230,6 +27238,66 @@
 	});
 
 	module.exports = Examples;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+	var PropTypes = React.PropTypes;
+
+	var WeatherForm = React.createClass({
+	  displayName: "WeatherForm",
+
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "form",
+	        null,
+	        React.createElement("input", { type: "text" }),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "button",
+	          null,
+	          "Get Weather"
+	        )
+	      )
+	    );
+	  }
+
+	});
+
+	module.exports = WeatherForm;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var PropTypes = React.PropTypes;
+
+	var WeatherMessage = React.createClass({
+	  displayName: 'WeatherMessage',
+
+
+	  render: function render() {
+	    return React.createElement(
+	      'h3',
+	      null,
+	      'It is 40 in SA'
+	    );
+	  }
+
+	});
+
+	module.exports = WeatherMessage;
 
 /***/ }
 /******/ ]);
